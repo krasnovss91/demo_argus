@@ -1,0 +1,5 @@
+argusfito:
+  send-message-path: https://argusgate2.fitorf.ru/srv_rec2/ws/rec2?wsdl
+  auth:
+    username: argusfito
+    password: argusfito
