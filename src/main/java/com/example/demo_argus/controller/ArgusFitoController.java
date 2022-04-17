@@ -15,17 +15,17 @@ public class ArgusFitoController {
     @ResponseBody
     public Object getCertificate(@RequestBody ArgusDto argusDto){//здесь получаем фитосанитарный сертификат
 
-        ResponseEntity<String> entity =  argusFitoApiService.sendDataForSertificate(argusDto);
-        System.out.println(entity.getBody());
+        ResponseEntity<String> entity =  argusFitoApiService.sendDataForCertificate(argusDto);
+       // System.out.println(entity.getBody());
         return entity.getBody();
     }
 
-    @PutMapping("https://argusgate2.fitorf.ru/srv_rec2/ws/rec2?wsdl")
+    @PostMapping("api/conclusion")
     @ResponseBody
     public Object getConclusion(@RequestBody ArgusDto argusDto){//здесь получаем заключение
 
-        ResponseEntity entity = (ResponseEntity) argusFitoApiService.sendDataForConclusion(argusDto);
-        System.out.println(entity.getBody().toString());
+        ResponseEntity<String> entity =  argusFitoApiService.sendDataForConclusion(argusDto);
+       // System.out.println(entity.getBody());
         return entity.getBody();
     }
 
